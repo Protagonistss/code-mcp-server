@@ -21,6 +21,7 @@ A Model-Controller-Provider (MCP) architecture based server implementation using
 │   └── database.py # Database configuration
 ├── main.py        # Application entry point
 ├── requirements.txt # Project dependencies
+├── environment.yml  # Conda environment file
 └── README.md      # Project documentation
 ```
 
@@ -45,15 +46,25 @@ A Model-Controller-Provider (MCP) architecture based server implementation using
 
 ## Setup
 
-1. Create a virtual environment:
+1. Create a Conda environment:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+# Create a new environment with Python 3.12
+conda create -n codeMcpServer python=3.12
+# Activate the environment
+conda activate codeMcpServer
 ```
 
 2. Install dependencies:
 ```bash
+# Using the provided environment file (recommended)
+conda env create -f environment.yml
+
+# OR using pip 
 pip install -r requirements.txt
+
+# OR using conda with conda-forge channel
+conda config --add channels conda-forge
+conda install --file requirements.txt
 ```
 
 3. Run the server:
@@ -62,6 +73,36 @@ uvicorn main:app --reload
 ```
 
 The server will start at `http://localhost:8000`
+
+## Dependencies
+
+Key dependencies in this project:
+- Python 3.12.9
+- FastAPI 0.112.2
+- SQLAlchemy 2.0.37
+- Pydantic 2.11.2
+- Uvicorn 0.32.1
+- Python-dotenv 0.21.0
+
+For a complete list, see `environment.yml` or `requirements.txt`.
+
+## Environment Management
+
+### Export Environment
+To export your environment for sharing:
+```bash
+# Export full environment with exact versions (without prefix)
+conda env export | grep -v "^prefix: " > environment.yml
+
+# Or export only manually installed packages
+conda env export --from-history > environment.yml
+```
+
+### Import Environment
+To recreate an environment from the exported file:
+```bash
+conda env create -f environment.yml
+```
 
 ## API Documentation
 
