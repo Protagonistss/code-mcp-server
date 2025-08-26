@@ -48,6 +48,9 @@ Homepage = "https://github.com/yourusername/code-mcp-server"
 Repository = "https://github.com/yourusername/code-mcp-server"
 Documentation = "https://github.com/yourusername/code-mcp-server#readme"
 
+[project.scripts]
+dsl_mcp = "src.dsl_mcp.__main__:main"
+
 [tool.black]
 line-length = 88
 target-version = ['py312']
