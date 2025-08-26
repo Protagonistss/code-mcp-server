@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "code-mcp-server": {
+    "code-mcp": {
       "command": "uv",
-      "args": ["run", "python", "dsl_mcp"],
+      "args": ["run", "python", "code_mcp"],
       "cwd": "."
     }
   }

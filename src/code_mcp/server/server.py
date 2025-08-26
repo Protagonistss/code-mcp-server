@@ -10,14 +10,14 @@ from ..tools import CodeAnalysisTool
 logger = logging.getLogger(__name__)
 
 # 创建FastMCP服务器实例
-mcp = FastMCP("code-mcp-server")
+mcp = FastMCP("coder-mcp")
 
 # 初始化代码分析工具
 code_tool = CodeAnalysisTool()
 
 @mcp.tool()
 async def code_analysis(code: str) -> Dict[str, Any]:
-    """分析代码结构和复杂度
+    """代码分析 - 分析代码结构和复杂度
     
     Args:
         code: 要分析的代码内容
