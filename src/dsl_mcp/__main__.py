@@ -3,7 +3,7 @@ MCP服务器主入口模块
 """
 import asyncio
 import logging
-from server import MCPServer
+from .server.server import MCPServer
 
 # 配置日志
 logging.basicConfig(

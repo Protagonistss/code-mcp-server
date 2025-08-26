@@ -5,7 +5,7 @@ import logging
 from typing import Dict, Any
 from mcp.server.fastmcp import FastMCP
 from mcp.server.models import InitializationOptions
-from tools import CodeAnalysisTool
+from ..tools.tools import CodeAnalysisTool
 
 logger = logging.getLogger(__name__)
 
