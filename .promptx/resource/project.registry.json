@@ -4,8 +4,8 @@
   "metadata": {
     "version": "2.0.0",
     "description": "project 级资源注册表",
-    "createdAt": "2025-08-26T04:41:38.690Z",
-    "updatedAt": "2025-08-26T04:41:38.693Z",
+    "createdAt": "2025-08-26T05:29:41.793Z",
+    "updatedAt": "2025-08-26T05:29:41.798Z",
     "resourceCount": 2
   },
   "resources": [
@@ -17,9 +17,9 @@
       "description": "执行模式，定义具体的行为模式",
       "reference": "@project://.promptx/resource/role/mcp-expert/execution/mcp-development-workflow.execution.md",
       "metadata": {
-        "createdAt": "2025-08-26T04:41:38.692Z",
-        "updatedAt": "2025-08-26T04:41:38.692Z",
-        "scannedAt": "2025-08-26T04:41:38.692Z",
+        "createdAt": "2025-08-26T05:29:41.796Z",
+        "updatedAt": "2025-08-26T05:29:41.796Z",
+        "scannedAt": "2025-08-26T05:29:41.796Z",
         "path": "role/mcp-expert/execution/mcp-development-workflow.execution.md"
       }
     },
@@ -31,9 +31,9 @@
       "description": "专业角色，提供特定领域的专业能力",
       "reference": "@project://.promptx/resource/role/mcp-expert/mcp-expert.role.md",
       "metadata": {
-        "createdAt": "2025-08-26T04:41:38.693Z",
-        "updatedAt": "2025-08-26T04:41:38.693Z",
-        "scannedAt": "2025-08-26T04:41:38.693Z",
+        "createdAt": "2025-08-26T05:29:41.797Z",
+        "updatedAt": "2025-08-26T05:29:41.797Z",
+        "scannedAt": "2025-08-26T05:29:41.797Z",
         "path": "role/mcp-expert/mcp-expert.role.md"
       }
     }

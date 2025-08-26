@@ -6,9 +6,9 @@ import json
 import logging
 import sys
 from typing import Any, Dict, List
-from mcp import ServerSession
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
+from mcp.types import Tool
 from tools.code_analysis import CodeAnalysisTool
 
 logger = logging.getLogger(__name__)
@@ -31,14 +31,14 @@ class MCPServer:
         """设置MCP服务器处理器"""
         
         @self.mcp_server.list_tools()
-        async def list_tools() -> List[Dict[str, Any]]:
+        async def list_tools() -> List[Tool]:
             """列出可用的工具"""
             logger.info("收到工具列表请求")
             tools_list = [
-                {
-                    "name": "code_analysis",
-                    "description": "分析代码结构和复杂度",
-                    "inputSchema": {
+                Tool(
+                    name="code_analysis",
+                    description="分析代码结构和复杂度",
+                    inputSchema={
                         "type": "object",
                         "properties": {
                             "code": {
@@ -48,9 +48,9 @@ class MCPServer:
                         },
                         "required": ["code"]
                     }
-                }
+                )
             ]
-            logger.info(f"返回工具列表: {tools_list}")
+            logger.info(f"返回工具列表: {[tool.name for tool in tools_list]}")
             return tools_list
         
         @self.mcp_server.call_tool()
@@ -73,10 +73,14 @@ class MCPServer:
         logger.info("MCP服务器启动中...")
         
         try:
+            # 使用正确的run方法，传入空的初始化选项
             async with stdio_server() as (read_stream, write_stream):
-                async with ServerSession(self.mcp_server, read_stream, write_stream):
-                    logger.info("MCP服务器已启动，等待连接...")
-                    await asyncio.Future()  # 保持运行
+                logger.info("stdio_server上下文管理器创建成功")
+                # 传入空的初始化选项
+                await self.mcp_server.run(read_stream, write_stream, {})
+                logger.info("MCP服务器已启动，等待连接...")
         except Exception as e:
             logger.error(f"MCP服务器启动失败: {e}")
+            import traceback
+            traceback.print_exc()
             sys.exit(1)

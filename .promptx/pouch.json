@@ -4,7 +4,7 @@
     {
       "from": "initial",
       "command": "init",
-      "timestamp": "2025-08-26T04:39:12.644Z",
+      "timestamp": "2025-08-26T05:29:41.778Z",
       "args": [
         {
           "workingDirectory": "/Users/huangshan/Code/Protagonistss/code-mcp-server",
@@ -15,50 +15,17 @@
     {
       "from": "initialized",
       "command": "welcome",
-      "timestamp": "2025-08-26T04:39:15.237Z",
+      "timestamp": "2025-08-26T05:29:44.251Z",
       "args": []
     },
     {
       "from": "service_discovery",
       "command": "action",
-      "timestamp": "2025-08-26T04:39:18.189Z",
-      "args": [
-        "nuwa"
-      ]
-    },
-    {
-      "from": "role_activated_with_memory",
-      "command": "action",
-      "timestamp": "2025-08-26T04:41:33.594Z",
-      "args": [
-        "mcp-expert"
-      ]
-    },
-    {
-      "from": "role_activated_with_memory",
-      "command": "init",
-      "timestamp": "2025-08-26T04:41:38.686Z",
-      "args": [
-        {
-          "workingDirectory": "/Users/huangshan/Code/Protagonistss/code-mcp-server",
-          "ideType": "cursor"
-        }
-      ]
-    },
-    {
-      "from": "initialized",
-      "command": "welcome",
-      "timestamp": "2025-08-26T04:41:41.245Z",
-      "args": []
-    },
-    {
-      "from": "service_discovery",
-      "command": "action",
-      "timestamp": "2025-08-26T04:41:43.739Z",
+      "timestamp": "2025-08-26T05:29:46.866Z",
       "args": [
         "mcp-expert"
       ]
     }
   ],
-  "lastUpdated": "2025-08-26T04:41:43.754Z"
+  "lastUpdated": "2025-08-26T05:29:46.886Z"
 }
