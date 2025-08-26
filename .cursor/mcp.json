@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "code-mcp-server": {
+      "command": "uv",
+      "args": ["run", "python", "server.py"],
+      "cwd": "/Users/huangshan/Code/Protagonistss/code-mcp-server"
+    }
+  }
+}
