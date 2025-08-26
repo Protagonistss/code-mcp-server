@@ -1,9 +1,9 @@
 """
-代码分析工具
+代码分析工具 - FastMCP 2.0 兼容版本
 """
 import ast
 import logging
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 logger = logging.getLogger(__name__)
 
